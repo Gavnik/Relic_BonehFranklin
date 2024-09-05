@@ -40,32 +40,6 @@ make
 make check
 sudo make install
 ```
-
-## RELIC Installation
-
-Now, let's install RELIC:
-
-1. Clone the repository:
-```bash
-git clone https://github.com/relic-toolkit/relic.git
-cd relic
-mkdir build
-cd build
-```
-
-2. Configure RELIC:
-```bash
-cmake .. -DALLOC=AUTO -DARCH=A64 -DWSIZE=64 -DCHECK=off -DFP_PRIME=638 -DFP_QNRES=off -DEP_METHD="PROJC;LWNAF;COMBS;INTER"
-```
-
-Note: Adjust parameters as needed. For example, `-DFP_PRIME` sets the security level (638 for 160-bit security).
-
-3. Build and install:
-```bash
-make
-sudo make install
-```
-
 ## PBC (Pairing-Based Cryptography) Library Installation
 
 To install the PBC library:
@@ -85,6 +59,31 @@ make
 sudo make install
 ```
 
+## RELIC Installation
+
+Now, let's install RELIC:
+
+1. Clone the repository:
+```bash
+git clone https://github.com/relic-toolkit/relic.git
+cd relic
+mkdir build
+cd build
+```
+
+2. Configure RELIC:
+```bash
+cmake .. -DALLOC=AUTO -DARCH=A64 -DWSIZE=64 -DCHECK=off -DFP_PRIME=638 -DFP_QNRES=off -DEP_METHD="PROJC;LWNAF;COMBS;INTER"
+```
+
+Note: Adjust parameters as needed. For example, `-DFP_PRIME` defines which curves can be implemented.
+
+3. Build and install:
+```bash
+make
+sudo make install
+```
+
 ## Environment Setup
 
 Add the following lines to your `~/.bashrc` file:
@@ -98,21 +97,6 @@ export PATH=/home/pi/pbc-0.5.14:$PATH
 ```
 
 Remember to source your `.bashrc` or restart your terminal after making these changes.
-
-## Python Integration
-
-To use RELIC with Python:
-
-1. Install pip:
-```bash
-sudo apt install python3-pip
-```
-
-2. Install Cython and python-relic:
-```bash
-pip install Cython
-pip install python-relic
-```
 
 ## Compiling C Programs with RELIC
 
@@ -145,16 +129,15 @@ For using the BN_P638 curve, special modifications are required. Refer to the RE
 
 Contributions to improve this guide are welcome. Please submit a pull request or open an issue for any suggestions or corrections.
 
-## License
-
-[Include appropriate license information here]
-
+##Notes
 
 In order to run Boneh_Franklin_Basic and Boneh_Franklin_Full, please first install [Relic_Toolkit](https://github.com/relic-toolkit/relic).
 
 Build instructions can be found in the [Wiki](https://github.com/relic-toolkit/relic/wiki/Building).
 
-
 DFP_QNRES must be set to "on" in order for B12_P638 & B12_P446 curves to run.
 DFP_PRIME sets specifies which curves can run each time. Relic must be build again in order to run a curve with different DFP_PRIME number.
- 
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details. 
