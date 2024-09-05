@@ -129,7 +129,7 @@ For using the BN_P638 curve, special modifications are required. Refer to the RE
 
 Contributions to improve this guide are welcome. Please submit a pull request or open an issue for any suggestions or corrections.
 
-##Notes
+## Notes
 
 In order to run Boneh_Franklin_Basic and Boneh_Franklin_Full, please first install [Relic_Toolkit](https://github.com/relic-toolkit/relic).
 
