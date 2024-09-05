@@ -121,22 +121,21 @@ rm -rf build
 
 Then, recreate the build directory and follow the installation steps again.
 
-## Note on BN_P638 Curve
+## Notes
 
 For using the BN_P638 curve, special modifications are required. Refer to the RELIC repository's BN_P638 branch for necessary changes in specific files.
+
+DFP_QNRES must be set to "on" in order for B12_P638 & B12_P446 curves to run.
+
+DFP_PRIME sets specifies which curves can run each time. Relic must be build again in order to run a curve with different DFP_PRIME number.
+
+For further information about Relic-Toolkit, please refer to [Relic_Toolkit](https://github.com/relic-toolkit/relic).
+
+Additional build instructions can be found in the [Wiki](https://github.com/relic-toolkit/relic/wiki/Building).
 
 ## Contributing
 
 Contributions to improve this guide are welcome. Please submit a pull request or open an issue for any suggestions or corrections.
-
-## Notes
-
-In order to run Boneh_Franklin_Basic and Boneh_Franklin_Full, please first install [Relic_Toolkit](https://github.com/relic-toolkit/relic).
-
-Build instructions can be found in the [Wiki](https://github.com/relic-toolkit/relic/wiki/Building).
-
-DFP_QNRES must be set to "on" in order for B12_P638 & B12_P446 curves to run.
-DFP_PRIME sets specifies which curves can run each time. Relic must be build again in order to run a curve with different DFP_PRIME number.
 
 ## License
 
